@@ -1,0 +1,5 @@
+C:\Projetos\COnta\obj\Debug\net6.0\COnta.csproj.AssemblyReference.cache
+C:\Projetos\COnta\obj\Debug\net6.0\COnta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\COnta\obj\Debug\net6.0\COnta.AssemblyInfoInputs.cache
+C:\Projetos\COnta\obj\Debug\net6.0\COnta.AssemblyInfo.cs
+C:\Projetos\COnta\obj\Debug\net6.0\COnta.csproj.CoreCompileInputs.cache
