@@ -12,10 +12,39 @@ namespace COnta.Classe
         public string Agencia { get;set;}
         public string Titular { get;set;}
         public double Saldo { get;set;}
+
+         
     }
 
-    public void Sacar(double)
+    public Conta(int nConta, string agencia, string titular, double saldo)
     {
+        this.NConta = nConta;
+        this.Agencia = agencia;
+        this.Titular = titular;
+        this.Saldo = saldo;
+    }
 
+    public void Saque(double valor)
+    {
+        if (this.Saldo >= 0)
+        {
+            Saldo = Saldo - valor;
+        }
+        else
+        {
+            Console.WriteLine("Saldo Insuficiente!");
+        }
+    }
+
+    public void Depositar(double valor)
+    {
+        if (valor >= 0)
+        {
+            Saldo += valor;
+        }
+        else
+        {
+            Console.WriteLine("Operação invalida!");
+        }
     }
 }
