@@ -1,32 +1,35 @@
 ﻿
-namespace COnta.Classe
+namespace ExercicioHernca_2.Classes
 {
-    internal class contaEstudante:conta
+    internal class ContaEstudante : Conta
     {
-        public double LimitecheqEspecial { get; set; }
-        public string Cpf { get; set; }
-        public string NomeInstitui { get; set; }
+        public string CPF { get; set; }
+        public string NomeInstituicao { get; set; }
+        public double LImiteCheque { get; set; }
 
-        public contaEstudante(double limitechequeEspecial, string Cpf, string instituicao, int nconta, string agencia, string titularConta,
-            double saldo): base(nconta, agencia, titularConta,saldo) 
-        { 
-            this.Saldo = saldo;
-            this.Cpf = Cpf;
-
+        public ContaEstudante(string cpf, string nomeInstituicao, double lImiteCheque, string numeroConta, string agencia, string titulo, double saldo) : base(agencia, numeroConta, titulo, saldo)
+        {
+            CPF = cpf;
+            NomeInstituicao = nomeInstituicao;
+            LImiteCheque = lImiteCheque;
         }
 
-        public override void Saque(double valor)
+        public ContaEstudante()
         {
-            if(valor <= Saldo + LimiteChequeEspecial)
+        }
+
+        public override void Sacar(double valor)
+        {
+            if (valor <= Saldo + LImiteCheque)
             {
                 Saldo -= valor;
-
             }
             else
             {
-                Console.WriteLine("Saldo Insuficiente");
+                Console.WriteLine("Saldo insuficiente");
             }
         }
+
 
     }
 }
